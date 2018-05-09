@@ -1,0 +1,22 @@
+{
+  "name": "spost",
+  "version": "0.0.0",
+  "description": "vue statefull post to IPU/intf API/Tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ajax",
+    "spost"
+  ],
+  "author": "kaven276@vip.sina.com",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "qs": "^6.5.1"
+  },
+  "peerDependencies": {
+    "vue": "2.x"
+  }
+}

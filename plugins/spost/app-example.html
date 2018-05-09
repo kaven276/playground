@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+
+<head>
+  {{ HEAD }}
+  <script>
+    /* 本文件放入 nuxt 项目的根下，名称为 app.html，用于加载指定的部署环境配置 */
+    (function autoLoadTheConfig() {
+      const type = window.location.search.substr(1) || 'prod';
+      window.type = type;
+      document.write('<jst src="./deploy-cfg/deploy-cfg-@.js"></jst>'.replace('@', type).replace(/jst/g, 'script'));
+    }());
+  </script>
+</head>
+
+<body {{ BODY_ATTRS }}>
+  {{ APP }}
+</body>
+
+</html>

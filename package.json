@@ -1,0 +1,42 @@
+{
+  "name": "appointment",
+  "version": "1.0.0",
+  "description": "修改意向单预约时间审核平台",
+  "author": "Li Yong <kaven276@vip.sina.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.1",
+      "port": 2006
+    }
+  },
+  "dependencies": {
+    "@nuxtjs/font-awesome": "^1.0.3",
+    "animate.css": "^3.6.1",
+    "axios": "^0.18.0",
+    "bootstrap-vue": "^2.0.0-rc.6",
+    "debug": "^3.1.0",
+    "lodash": "^4.17.5",
+    "luxon": "^1.0.0",
+    "nuxt": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-vue": "^4.0.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0"
+  }
+}
