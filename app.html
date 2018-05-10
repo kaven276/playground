@@ -5,11 +5,19 @@
   {{ HEAD }}
   <script>
     /* 本文件放入 nuxt 项目的根下，名称为 app.html，用于加载指定的部署环境配置 */
-    (function autoLoadTheConfig() {
-      const type = window.location.search.substr(1) || 'prod';
-      window.type = type;
-      document.write('<jst src="./deploy-cfg/deploy-cfg-@.js"></jst>'.replace('@', type).replace(/jst/g, 'script'));
-    }());
+    config = {
+      // 应用接口调用服务根地址，仅仅调试模式下使用，设置成 mbss-mock-server 的服务地址
+      // APIRoot: 'http://' + location.hostname + ':60080',
+      // APIRoot: 'http://60.28.151.83:60080',
+      APIRoot: 'http://localhost:3001',
+      APIFormat: 'h5proxy',
+
+      // 客户端部署使用的各个后台工作服务地址
+      workerPrefixes: {
+        '': 'http://127.0.0.1:3001', // 默认服务后台地址，必须有此项,
+      },
+    };
+
   </script>
 </head>
 
