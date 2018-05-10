@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import params from './getParams.js';
 
 // 在这里描述全局数据
 const env = {
@@ -11,6 +12,7 @@ const env = {
   },
   ctl: {
   },
+  params,
 };
 
 Vue.mixin({

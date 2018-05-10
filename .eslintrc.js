@@ -2,7 +2,9 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+  },
+  globals: {
+    window: true,
   },
   parserOptions: {
     parser: 'babel-eslint'
@@ -19,6 +21,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'linebreak-style': 'off',
     'max-len': 0,
     'no-alert': 0,
     'no-console': 0,
