@@ -26,20 +26,20 @@
       <tbody>
         <tr v-for="task in ts.d.qryAuditAppointments" :key="task.taskId">
           <td>{{task.taskId}}</td>
+          <td>{{task.channelName}}</td>
+          <td>{{task.productName}}</td>
           <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
-          <td>{{task.activName}}</td>
+          <td>{{task.activMoney}}</td>
+          <td>{{task.userAddress}}</td>
+          <td>{{task.userName}}</td>
+          <td>{{task.userPhone}}</td>
+          <td>{{task.apptOld}}</td>
+          <td>{{task.appNew}}</td>
+          <td>{{task.applyTime}}</td>
+          <td>{{task.auditStaffName}}</td>
+          <td>{{task.auditStaffId}}</td>
+          <td>{{task.auditTime}}</td>
+          <td>{{task.auditResult}}</td>
           <td>
             <div class="btn-group">
                 <button class="btn btn-info btn-sm" @click="auditAppointment(task),'1'" >通过</button>
