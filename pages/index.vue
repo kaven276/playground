@@ -39,7 +39,7 @@
           <td>{{task.auditStaffName}}</td>
           <td>{{task.auditStaffId}}</td>
           <td>{{task.auditTime}}</td>
-          <td>{{task.auditResult}}</td>
+          <td>{{task.auditResultDesc}}</td>
           <td>
             <div class="btn-group">
                 <button class="btn btn-info btn-sm" @click="auditAppointment(task,'1')" >通过</button>
@@ -86,6 +86,7 @@ export default {
         reason: '', // 拒绝原因
       }).then(() => {
         window.alert('审核成功!');
+        this.qryAuditAppointments();
       }).catch((e) => {
         console.error(e);
         window.alert('审核失败');
