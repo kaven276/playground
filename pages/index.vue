@@ -42,8 +42,8 @@
           <td>{{task.auditResult}}</td>
           <td>
             <div class="btn-group">
-                <button class="btn btn-info btn-sm" @click="auditAppointment(task),'1'" >通过</button>
-                <button class="btn btn-warning btn-sm" @click="auditAppointment(task),'0'" >拒绝</button>
+                <button class="btn btn-info btn-sm" @click="auditAppointment(task,'1')" >通过</button>
+                <button class="btn btn-warning btn-sm" @click="auditAppointment(task,'0')" >拒绝</button>
             </div>
           </td>
         </tr>
