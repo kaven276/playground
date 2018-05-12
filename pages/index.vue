@@ -79,7 +79,7 @@ export default {
         channelCode: task.channelCode,
         taskId: task.taskId,
         reseq: task.reseq,
-        applyTime: task.applyTime, // 申请预约时间修改的时间点
+        applyTime: task.applyTime.substr(0, task.applyTime.indexOf('.')), // 申请预约时间修改的时间点
         iomStaffId: this.$root.params.iomStaffId, // 中兴工号
         iomStaffName: this.$root.params.iomStaffName, // 中兴工号对应的姓名
         result: _result, // 0拒绝 1通过
