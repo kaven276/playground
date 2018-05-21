@@ -1,0 +1,22 @@
+{
+  "editor.tabSize": 2,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "dist": true,
+    ".nuxt": true,
+    ".git": true,
+    "node_modules": true
+  },
+  "eslint.validate": [
+    {"autoFix": true, "language": "javascript"},
+    "javascriptreact",
+    {"autoFix": true, "language": "vue"}
+  ],
+  "eslint.autoFixOnSave": true,
+  "prettier.eslintIntegration": true
+}
