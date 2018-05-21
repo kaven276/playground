@@ -40,7 +40,7 @@ module.exports = {
     },
   },
   router: {
-    base: '/appointment/',
+    // base: '/experiment/',
   },
   modules: [
     '@nuxtjs/font-awesome',
