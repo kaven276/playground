@@ -65,7 +65,7 @@ export default {
             post = API.post('/mobiledata?action=Interface.call', `data=${encodeURIComponent(JSON.stringify(data))}`);
             break;
           case 'backend':
-            post = API.post(path, data, { transformRequest: [data => qs.stringify(data)] });
+            post = API.post(path, data, { transformRequest: [d => qs.stringify(d)] });
             break;
           case 'h5proxy':
             data.__action = path2; // eslint-disable-line no-underscore-dangle
