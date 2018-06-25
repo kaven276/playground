@@ -1,5 +1,8 @@
 {
   "editor.tabSize": 2,
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  "files.defaultLanguage": "vue",
   "editor.quickSuggestions": {
     "other": true,
     "comments": true,
