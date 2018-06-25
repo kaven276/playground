@@ -55,6 +55,11 @@ export default {
           return;
         }
 
+        if (this.$root.auth.JWT) { // 已经JWT登录过
+          // Authorization: Bearer <token> 会引发 option 请求，不方便使用
+          data.JWT = this.$root.auth.JWT;
+        }
+
         if (this.$store && this.$store.state.session) {
           Object.assign(data, this.$store.state.session.cookies);
         }

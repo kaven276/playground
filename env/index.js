@@ -5,6 +5,7 @@ import params from './getParams.js';
 const env = {
   dev: false,
   envType: window.type, // 当前配置环境
+  auth: {},
   mvd: {}, // map view data
   selected: {
   },
