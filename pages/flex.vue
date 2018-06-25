@@ -15,12 +15,18 @@
 
 <template>
   <div id="toplayout">
-    <div id="leftside" @click="show.slideRight=!show.slideRight">abc</div>
+    <div id="leftside" @click="show.slideRight=!show.slideRight">
+      <p>左右两侧排列<br/>上下居中对齐</p>
+      <div v-for="i in 9" :key="i" class="sides">
+        <div>{{i}}</div>
+        <div style="font-size:2em;">{{i}}</div>
+      </div>
+    </div>
     <div id="right">
       <div id="topbar"></div>
       <div id="mainarea">
         <div id="content">
-          <p v-for="i in 60" :key="i">{{i.toString().repeat(Math.random()*10)}}</p>
+          <p v-for="i in 20" :key="i">{{i.toString().repeat(Math.random()*10)}}</p>
         </div>
       </div>
     </div>
@@ -51,9 +57,11 @@ export default {
 
 }
 #leftside {
-  width: 20vw;
-  min-width: 100px;
+  // width: 20vw;
+  // min-width: 100px;
+  flex-basis: 20%;
   flex-grow: 0;
+  color: white;
   background-color: darkblue;
   // align-self: flex-start;
 }
@@ -66,7 +74,7 @@ export default {
   align-items: stretch;
 }
 #topbar {
-  height: 3em;
+  flex-basis: 3em;
   flex-grow: 0;
   background-color: darkcyan;
 }
@@ -80,10 +88,18 @@ export default {
   justify-content: center;
   align-items: stretch;
 }
+.sides {
+  padding-left: 1em;
+  padding-right: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid silver;
+}
 #content {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-around;
+  align-content: stretch;
   > p {
     margin-top: 1em;
     margin-left: 0.5em;

@@ -27,6 +27,12 @@ export default {
 
 <style lang="less">
 #mq {
+  @media screen and (orientation: portrait) {
+
+  }
+  @media screen and (orientation: landscape) {
+
+  }
   @media screen and (max-width: 768px) {
     color: red;
   }

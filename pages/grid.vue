@@ -11,6 +11,10 @@
 * grid-row grid-column
 * start / span n
 * item margin will shrink its width/height
+
+reference
+===========
+* [CSS3 Grid Layout](https://kb.cnblogs.com/page/178444/)
 </docs>
 
 <template>
@@ -85,7 +89,7 @@ export default {};
 
 #board {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(5vw, 1fr));
   > div {
     margin: 0.5em 0.5em;
     // height: 10vh;
