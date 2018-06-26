@@ -5,7 +5,7 @@
 <script>
 export default {
   created() {
-    this.complex();
+    this.merge();
   },
   methods: {
     obj() {
@@ -38,6 +38,19 @@ export default {
       const arr = [{ a: 1, b: 2 }, 3, 5];
       const [{ a }] = arr;
       console.log(a);
+    },
+    assign() {
+      const obj = { a: 1, b: 2 };
+      const obj2 = { b: -2, c: 3 };
+      Object.assign(obj, obj2);
+      console.log(obj);
+    },
+    merge() {
+      const obj = { a: 1, b: 2 };
+      const obj2 = { b: -2, c: 3 };
+      const result = { ...obj, ...obj2 };
+      const result2 = { ...obj2, ...obj };
+      console.log(result, result2);
     },
   },
 };
