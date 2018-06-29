@@ -15,6 +15,21 @@
           {{i.value}}
         </li>
       </ul>
+
+      <ul>
+        <li v-for="(i) in uncheckedList" :key="i.id">
+          <input type="checkbox" v-model="i.checked">
+          {{i.value}}
+        </li>
+      </ul>
+
+
+      <ul>
+        <li v-for="(i) in lessthan30" :key="i.id">
+          <input type="checkbox" v-model="i.checked">
+          {{i.value}}
+        </li>
+      </ul>
     </div>
 
   </div>
@@ -41,6 +56,12 @@ export default {
     checkedList() {
       return this.list.filter(item => item.checked);
     },
+    uncheckedList() {
+      return this.list.filter(item => !item.checked);
+    },
+    lessthan30() {
+      return this.list.filter(item => item.value < 30);
+    },
   },
 };
 </script>
@@ -51,7 +72,7 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   > ul {
-    width: 40%;
+    width: 20%;
   }
 }
 </style>
