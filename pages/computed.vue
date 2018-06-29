@@ -4,8 +4,8 @@
     <div id="compare">
       <ul>
         <li v-for="(i) in list" :key="i.id">
-          <input type="checkbox" v-model="i.checked">
-          {{i.value}}
+          <input type="checkbox" v-model="i.checked" @input="check(i)">
+          {{i.value}}  {{i.p4}}
         </li>
       </ul>
 
@@ -51,6 +51,12 @@ export default {
         checked: Math.random() < 0.5,
       });
     },
+    check(item) {
+      console.log(item.checked);
+      // item.p4 = Date.now();
+      this.$set(item, 'p4', Date.now());
+      console.log(item);
+    },
   },
   computed: {
     checkedList() {
@@ -61,6 +67,12 @@ export default {
     },
     lessthan30() {
       return this.list.filter(item => item.value < 30);
+    },
+  },
+  watch: {
+    list() {
+      // push, splice, pop
+      console.log(`list length ${this.list.length}`);
     },
   },
 };
