@@ -11,6 +11,10 @@
 * 容器中项目的 margin 也计算在项目空间中
 ## 多行 wrap 下的情形
 * 可以整体拉伸，前中后，带边不带边均分
+
+说明
+- 在 vue 项目中可以比较容易生产数据，做事件处理范例
+- 在 vue 项目中自带 webpack css 处理，css 不用写 vender 前缀
 </docs>
 
 <template>
@@ -19,11 +23,20 @@
       <p>左右两侧排列<br/>上下居中对齐</p>
       <div v-for="i in 9" :key="i" class="sides">
         <div>{{i}}</div>
-        <div style="font-size:2em;">{{i}}</div>
+        <div style="font-size:2em;" :style="{order: Math.random()>0.5?1:-1}">{{i}}</div>
+      </div>
+      <div style="display:flex;align-items:flex-start;justify-content:center;height:100px;background-color:green;">
+        <span style="background-color:blue;align-self:center;">only item</span>
       </div>
     </div>
     <div id="right">
-      <div id="topbar"></div>
+      <div id="topbar">
+        <a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank">flex学习参考</a>
+        <br/>
+        display:flex; flex-direction; flex-wrap; justify-content; align-self; align-content;
+        <br/>
+        align-self; order; flex-basis; flex-grow; flex-shrink
+      </div>
       <div id="mainarea">
         <div id="content">
           <p v-for="i in 20" :key="i">{{i.toString().repeat(Math.random()*10)}}</p>
@@ -51,24 +64,26 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: row; // 在这里可以左右交换
+  justify-content: flex-end; // stretch 模式下，该配置不起作用
   align-items: stretch;
-
 }
 #leftside {
   // width: 20vw;
-  // min-width: 100px;
-  flex-basis: 20%;
+  min-width: 100px; // 能保证最小宽度
+  flex-basis: 200px; // 固定总宽度 20%
   flex-grow: 0;
+  flex-shrink: 0;
   color: white;
   background-color: darkblue;
   // align-self: flex-start;
 }
 #right {
   // order: -1;
-  width: 0;
+  // width: 800px;
+  flex-basis: 600px;
   flex-grow: 1;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: stretch;
