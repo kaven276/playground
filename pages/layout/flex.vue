@@ -37,6 +37,11 @@
         <br/>
         align-self; order; flex-basis; flex-grow; flex-shrink
       </div>
+      <div style="display:flex;justify-content:space-between;flex-direction:row;align-items:center;">
+        <hr style="flex-grow:1;"/>
+        <h5 style="text-align:center;padding:0em 1ex;">title</h5>
+        <hr style="flex-grow:1;"/>
+      </div>
       <div id="mainarea">
         <div id="content">
           <p v-for="i in 20" :key="i">{{i.toString().repeat(Math.random()*10)}}</p>
