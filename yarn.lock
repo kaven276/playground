@@ -1020,8 +1020,8 @@ bootstrap-vue@^2.0.0-rc.6:
     vue-functional-data-merge "^2.0.5"
 
 bootstrap@^4.0.0:
-  version "4.1.1"
-  resolved "http://registry.npm.taobao.org/bootstrap/download/bootstrap-4.1.1.tgz#3aec85000fa619085da8d2e4983dfd67cf2114cb"
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.2.tgz#8e0cd61611728a5bf65a3a2b8d6ff6c77d5d7479"
 
 brace-expansion@^1.1.7:
   version "1.1.11"
